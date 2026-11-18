@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Workspace Model",
+    "description": "Sets a default model for each workspace. New sessions start from that workspace's model; workspaces without one keep the global default."
+  }
+}
