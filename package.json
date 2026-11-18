@@ -2,6 +2,7 @@
   "name": "@yakumioto/dsh-workspace-model",
   "version": "0.1.0",
   "description": "Per-workspace default model for DeepSeek Harness: new sessions in a workspace start from its own model, unset workspaces keep the deployment default",
+  "icon": "./assets/icon.svg",
   "license": "MIT",
   "type": "module",
   "main": "lib/index.js",
