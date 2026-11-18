@@ -1,0 +1,9 @@
+# Host row for the per-workspace default model plugin. Its Config schema is the
+# namespace the Models settings UI reads and writes (`workspace-model`).
+# New sessions look up their workspace's entry here; a workspace with no entry
+# keeps whatever global default the deployment has.
+- insert:
+    - id: workspace-model
+      name: '@yakumioto/dsh-workspace-model'
+      config:
+        workspaceDefaults: []
