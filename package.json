@@ -12,6 +12,11 @@
     "./package.json": "./package.json",
     "./locale/*.json": "./locale/*.json"
   },
+  "scripts": {
+    "test": "node test/unit.mjs && node test/client.mjs && node test/manifest.mjs",
+    "typecheck": "tsc -p jsconfig.json",
+    "check": "node --check lib/index.js && node --check client/client.js && npm test && npm run typecheck"
+  },
   "dsh": {
     "bundle": {
       "patch": "./cordis.patch.yml"
@@ -39,5 +44,9 @@
   ],
   "dependencies": {
     "@deepseek-ai/schemastery": "^3.19.0"
+  },
+  "devDependencies": {
+    "react": "^19.3.1",
+    "typescript": "^5.9.3"
   }
 }

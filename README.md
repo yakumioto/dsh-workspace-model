@@ -34,3 +34,17 @@ dsh plugin add github:yakumioto/dsh-workspace-model
 ## License
 
 MIT
+
+## 开发
+
+不需要构建：Host 是纯 ESM，客户端 bundle 直接提交。改完刷新页面就能看到。
+
+```bash
+npm ci
+npm run check   # 语法检查 + 三组测试 + 类型检查
+```
+
+- `test/unit.mjs`：工作区匹配与「该不该套用默认」的 17 个分支。
+- `test/client.mjs`：客户端 bundle 的装载、槽注册与菜单动作。
+- `test/manifest.mjs`：`package.json`、locale、图标、patch 与 bundle id 之间的一致性。
+- `jsconfig.json` + JSDoc：`tsc --noEmit` 做类型检查，不产出文件。
